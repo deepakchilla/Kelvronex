@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-32 overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center pt-32 overflow-hidden bg-white">
       <div className="absolute inset-0 grid-pattern opacity-40 pointer-events-none" />
       
       <div className="container mx-auto px-8 relative z-10">
@@ -18,7 +18,7 @@ export default function Hero() {
               transition={{ duration: 0.8 }}
               className="flex items-center space-x-4 mb-12"
             >
-              <div className="w-12 h-[1px] bg-white" />
+              <div className="w-12 h-[1px] bg-black" />
               <span className="text-[10px] font-black uppercase tracking-[0.5em] text-secondary">
                 Technological Precision
               </span>
@@ -28,7 +28,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-7xl md:text-[10rem] font-black tracking-[-0.05em] leading-[0.85] mb-12 uppercase"
+              className="text-7xl md:text-[10rem] font-black tracking-[-0.05em] leading-[0.85] mb-12 uppercase text-black"
             >
               Kelvornex <br />
               <span className="text-outline">Academy</span>
@@ -38,7 +38,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="max-w-xl text-lg md:text-xl text-secondary font-medium mb-16 leading-relaxed border-l-2 border-white/10 pl-8"
+              className="max-w-xl text-lg md:text-xl text-secondary font-medium mb-16 leading-relaxed border-l-2 border-black/10 pl-8"
             >
               Bridging the architectural gap between potential and industry performance through zero-compromise technical mastery.
             </motion.p>
@@ -49,11 +49,11 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-0"
             >
-              <button className="px-12 py-6 bg-white text-black font-black uppercase tracking-[0.3em] text-xs hover:bg-transparent hover:text-white border border-white transition-all flex items-center group">
+              <button className="px-12 py-6 bg-black text-white font-black uppercase tracking-[0.3em] text-xs hover:bg-transparent hover:text-black border border-black transition-all flex items-center group">
                 <span>View Tracks</span>
                 <ArrowRight className="w-4 h-4 ml-4 group-hover:translate-x-2 transition-transform" />
               </button>
-              <button className="px-12 py-6 bg-transparent text-white border border-white border-l-0 font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all">
+              <button className="px-12 py-6 bg-transparent text-black border border-black border-l-0 font-black uppercase tracking-[0.3em] text-xs hover:bg-black hover:text-white transition-all">
                 Our Partners
               </button>
             </motion.div>
@@ -64,12 +64,12 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
-              className="aspect-[4/5] border border-white/10 relative overflow-hidden"
+              className="aspect-[4/5] border border-black/10 relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-white/[0.03]" />
+              <div className="absolute inset-0 bg-black/[0.03]" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 border border-white/20 rotate-45" />
-                <div className="absolute w-48 h-48 border border-white/40 -rotate-12" />
+                <div className="w-64 h-64 border border-black/20 rotate-45" />
+                <div className="absolute w-48 h-48 border border-black/40 -rotate-12" />
               </div>
             </motion.div>
           </div>
@@ -78,5 +78,6 @@ export default function Hero() {
     </section>
   );
 }
+
 
 

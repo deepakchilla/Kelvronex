@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #080808;
-  --color-foreground: #ffffff;
-  --color-primary: #ffffff;
-  --color-secondary: #a0a0a0;
-  --color-accent: #222222;
-  --color-muted: #555555;
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-primary: #000000;
+  --color-secondary: #444444;
+  --color-accent: #e5e5e5;
+  --color-muted: #888888;
   
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
@@ -21,12 +21,12 @@
 }
 
 :root {
-  --background: #080808;
-  --foreground: #ffffff;
-  --card: #111111;
-  --card-foreground: #ffffff;
-  --border: #222222;
-  --ring: #ffffff;
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #f9f9f9;
+  --card-foreground: #000000;
+  --border: #eeeeee;
+  --ring: #000000;
 }
 
 body {
@@ -40,39 +40,40 @@ body {
 
 @layer utilities {
   .sharp-card {
-    @apply relative border border-white/10 bg-white/[0.02] transition-all duration-300 hover:bg-white/[0.05] hover:border-white/30;
+    @apply relative border border-black/10 bg-black/[0.01] transition-all duration-300 hover:bg-black/[0.03] hover:border-black/30;
   }
   
   .sharp-button {
-    @apply px-8 py-4 bg-white text-black font-black uppercase tracking-widest transition-all hover:bg-black hover:text-white hover:border-white border border-transparent;
+    @apply px-8 py-4 bg-black text-white font-black uppercase tracking-widest transition-all hover:bg-white hover:text-black hover:border-black border border-transparent;
   }
 
   .text-outline {
-    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+    -webkit-text-stroke: 1px rgba(0,0,0,0.3);
     color: transparent;
   }
 
   .grid-pattern {
-    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0);
     background-size: 40px 40px;
   }
 }
 
-/* Custom Scrollbar - Sharp */
+/* Custom Scrollbar - Sharp Light */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #080808;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222222;
+  background: #eeeeee;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #444444;
+  background: #cccccc;
 }
+
 
 
