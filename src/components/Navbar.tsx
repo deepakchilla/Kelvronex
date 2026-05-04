@@ -38,7 +38,7 @@ export default function Navbar() {
             <span className="text-white font-black text-lg">K</span>
           </div>
           <span className="text-xl font-black tracking-[0.2em] uppercase text-black hidden sm:block">
-            Kelvornex
+            Kelvronex
           </span>
         </Link>
 

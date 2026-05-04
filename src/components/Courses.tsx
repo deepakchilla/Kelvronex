@@ -25,6 +25,16 @@ const tracks = [
       { name: "Drone Avionics", code: "DA-07", project: "Flight Logic" },
       { name: "VLSI Design", code: "VL-11", project: "Circuit Blueprint" },
     ]
+  },
+  { 
+    id: "business", 
+    label: "Business & Strategic Law", 
+    courses: [
+      { name: "Financial Architecture", code: "FA-01", project: "Capital Blueprint" },
+      { name: "Strategic HR", code: "HR-03", project: "Talent Orchestration" },
+      { name: "Corporate Law", code: "CL-05", project: "Governance Framework" },
+      { name: "Business Analytics", code: "BA-09", project: "Insight Engine" },
+    ]
   }
 ];
 

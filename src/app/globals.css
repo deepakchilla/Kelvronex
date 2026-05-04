@@ -4,9 +4,9 @@
   --color-background: #ffffff;
   --color-foreground: #000000;
   --color-primary: #000000;
-  --color-secondary: #444444;
+  --color-secondary: #1a1a1a;
   --color-accent: #e5e5e5;
-  --color-muted: #888888;
+  --color-muted: #4a4a4a;
   
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
@@ -48,7 +48,7 @@ body {
   }
 
   .text-outline {
-    -webkit-text-stroke: 1px rgba(0,0,0,0.3);
+    -webkit-text-stroke: 1px rgba(0,0,0,0.5);
     color: transparent;
   }
 

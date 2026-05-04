@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kelvornex | Empowering the Next Generation of Tech Leaders",
-  description: "Kelvornex specializes in high-end software solutions, cutting-edge hardware courses, and strategic global collaborations with top institutions and industry giants.",
+  title: "Kelvronex | Empowering the Next Generation of Tech Leaders",
+  description: "Kelvronex specializes in high-end software solutions, cutting-edge hardware courses, and strategic global collaborations with top institutions and industry giants.",
 };
 
 

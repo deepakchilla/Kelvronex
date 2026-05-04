@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Terminal, Globe, Briefcase, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -16,14 +16,14 @@ export default function Footer() {
                 <span className="text-white font-black text-lg">K</span>
               </div>
               <span className="text-xl font-black tracking-[0.2em] uppercase text-black">
-                Kelvornex
+                Kelvronex
               </span>
             </div>
             <p className="text-secondary text-sm leading-relaxed mb-10 max-w-xs">
               Architectural minimalist solutions for the next generation of technical excellence. Zero compromise on precision.
             </p>
             <div className="flex space-x-6">
-              {[Github, Twitter, Linkedin, Mail].map((Icon, i) => (
+              {[Terminal, Globe, Briefcase, Mail].map((Icon, i) => (
                 <Link key={i} href="#" className="text-secondary hover:text-black transition-colors">
                   <Icon className="w-5 h-5" />
                 </Link>
@@ -73,8 +73,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-12 border-t border-black/5">
-          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-muted">
-            © 2026 Kelvornex Academy. All Rights Reserved.
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
+            © 2026 Kelvronex Academy. All Rights Reserved.
           </p>
           <div className="flex items-center space-x-8">
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted">Precision Crafted</span>
