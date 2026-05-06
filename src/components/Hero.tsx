@@ -9,7 +9,10 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-white">
       {/* Background Image Container */}
-      <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+      <div 
+        className="absolute right-0 top-0 w-1/2 h-full hidden lg:block"
+        style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%)', maskImage: 'linear-gradient(to right, transparent, black 20%)' }}
+      >
         <Image
           src="/hero_girl_laptop_1778072900971.png"
           alt="Focused student working on laptop at Kelvronex"
@@ -17,9 +20,6 @@ export default function Hero() {
           className="object-cover grayscale"
           priority
         />
-        {/* Aesthetic Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10 pointer-events-none" />
       </div>
 
       <div className="container mx-auto px-8 relative z-10 w-full">
@@ -85,7 +85,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-12 left-8 hidden lg:flex flex-col items-center"
+        className="absolute bottom-8 left-8 hidden 2xl:flex flex-col items-center"
       >
         <span className="text-[8px] font-black uppercase tracking-[0.5em] rotate-90 mb-8 origin-left">Scroll</span>
         <div className="w-[1px] h-12 bg-black/20" />

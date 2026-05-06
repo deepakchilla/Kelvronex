@@ -7,10 +7,10 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Tracks", href: "/tracks", number: "01" },
-  { name: "Partners", href: "/partners", number: "02" },
+  { name: "Programs", href: "/tracks", number: "01" },
+  { name: "Advanced Programs", href: "/tracks", number: "02" },
   { name: "About", href: "/about", number: "03" },
-  { name: "Contact", href: "/contact", number: "04" },
+  { name: "Contact Us", href: "/contact", number: "04" },
 ];
 
 export default function Navbar() {
@@ -55,20 +55,22 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center space-x-12 relative z-50">
+          <div className="hidden md:flex items-center space-x-10 relative z-50">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary hover:text-black transition-colors relative group"
+                className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary hover:text-black transition-colors relative group py-2 px-1 overflow-hidden"
               >
-                <span>{link.name}</span>
-                <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-black transition-all duration-300 group-hover:w-full" />
+                <span className="relative z-10">{link.name}</span>
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
+                <span className="absolute inset-0 bg-accent/5 origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300 ease-out -z-10" />
               </Link>
             ))}
-            <Link href="/contact" className="px-6 py-2 bg-black text-white text-[10px] font-black uppercase tracking-[0.3em] hover:bg-black/90 transition-all flex items-center group">
-              <span>Contact</span>
-              <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
+            <Link href="/login" className="px-8 py-3 bg-black text-white text-[10px] font-black uppercase tracking-[0.3em] transition-all flex items-center group relative overflow-hidden ml-4">
+              <span className="relative z-10 group-hover:text-black transition-colors duration-300">Login</span>
+              <ArrowRight className="w-3 h-3 ml-2 relative z-10 group-hover:translate-x-1 group-hover:text-accent transition-all duration-300" />
+              <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0 border border-black" />
             </Link>
           </div>
 
@@ -108,13 +110,26 @@ export default function Navbar() {
                     className="group flex items-center border-b border-black/10 pb-4"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <span className="text-sm font-black text-secondary/50 mr-8">{link.number}</span>
+                    <span className="text-sm font-black text-accent/50 mr-8 group-hover:text-accent transition-colors duration-500">{link.number}</span>
                     <span className="text-4xl font-black uppercase tracking-tighter text-black group-hover:translate-x-4 transition-transform duration-500">
                       {link.name}
                     </span>
                   </Link>
                 </motion.div>
               ))}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ delay: 0.4, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="mt-8"
+              >
+                <Link href="/login" className="w-full py-6 bg-black text-white font-black uppercase tracking-[0.3em] text-xs flex justify-center items-center group relative overflow-hidden">
+                  <span className="relative z-10 group-hover:text-black transition-colors duration-300">Login</span>
+                  <ArrowRight className="w-4 h-4 ml-3 relative z-10 group-hover:translate-x-2 group-hover:text-accent transition-all duration-300" />
+                  <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0 border border-black" />
+                </Link>
+              </motion.div>
             </div>
 
             <motion.div
