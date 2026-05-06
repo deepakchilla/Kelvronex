@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-white">
       {/* Background Image Container */}
-      <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block border-l border-black/10">
+      <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
         <Image
           src="/hero_girl_laptop_1778072900971.png"
           alt="Focused student working on laptop at Kelvronex"
@@ -17,7 +17,9 @@ export default function Hero() {
           className="object-cover grayscale"
           priority
         />
-        <div className="absolute inset-0 bg-white/10" />
+        {/* Aesthetic Gradients */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10 pointer-events-none" />
       </div>
 
       <div className="container mx-auto px-8 relative z-10 w-full">
