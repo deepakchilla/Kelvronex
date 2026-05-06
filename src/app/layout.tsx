@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,6 @@ export const metadata: Metadata = {
   description: "Kelvronex specializes in high-end software solutions, cutting-edge hardware courses, and strategic global collaborations with top institutions and industry giants.",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,7 +28,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }

@@ -36,31 +36,57 @@ export default function CourseHighlights() {
           {highlights.map((course, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: i * 0.2 }}
               className="group"
             >
-              <Link href={course.link} className="block relative overflow-hidden aspect-[16/9] mb-8 border border-black/10">
-                <Image
-                  src={course.image}
-                  alt={course.title}
-                  fill
-                  className="object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                <div className="absolute top-8 right-8 w-12 h-12 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-500">
-                  <ArrowUpRight className="w-6 h-6 text-black" />
+              <Link href={course.link} className="block relative overflow-hidden aspect-[16/9] mb-8 border border-black/10 group-hover:border-black/30 transition-colors duration-500">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.7, ease: [0.25, 1, 0.5, 1] }}
+                  className="w-full h-full relative"
+                >
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    fill
+                    className="object-cover grayscale group-hover:grayscale-[0.2] transition-all duration-700"
+                  />
+                </motion.div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 pointer-events-none" />
+                <div className="absolute top-8 right-8 w-12 h-12 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0 duration-500 shadow-xl">
+                  <ArrowUpRight className="w-6 h-6 text-black group-hover:scale-110 transition-transform duration-300" />
                 </div>
               </Link>
               <div className="flex justify-between items-start">
-                <div>
-                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted mb-2 block italic">{course.category}</span>
-                  <h3 className="text-3xl font-black uppercase tracking-tight">{course.title}</h3>
+                <div className="overflow-hidden">
+                  <motion.span 
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.2 + (i * 0.2) }}
+                    className="text-[10px] font-black uppercase tracking-[0.3em] text-muted mb-2 block italic"
+                  >
+                    {course.category}
+                  </motion.span>
+                  <motion.h3 
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.3 + (i * 0.2) }}
+                    className="text-3xl font-black uppercase tracking-tight group-hover:text-secondary transition-colors duration-300"
+                  >
+                    {course.title}
+                  </motion.h3>
                 </div>
-                <div className="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 border border-black/10">
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.5 + (i * 0.2) }}
+                  className="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 border border-black/10 group-hover:bg-black group-hover:text-white transition-all duration-300"
+                >
                   Enrolling Now
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}

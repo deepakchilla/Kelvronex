@@ -72,15 +72,22 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-12 border-t border-black/5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-12 border-t border-black/5 relative z-10">
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
             © 2026 Kelvronex Academy. All Rights Reserved.
           </p>
           <div className="flex items-center space-x-8">
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted">Precision Crafted</span>
             <div className="w-10 h-[1px] bg-black/10" />
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted">EST 2024</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted">EST 2026</span>
           </div>
+        </div>
+
+        {/* Massive Watermark */}
+        <div className="mt-20 overflow-hidden select-none pointer-events-none relative z-0">
+          <h1 className="text-[15vw] leading-none font-black text-black/[0.03] text-center tracking-tighter">
+            KELVRONEX
+          </h1>
         </div>
       </div>
     </footer>
