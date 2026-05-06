@@ -11,8 +11,8 @@ export default function Hero() {
       {/* Background Image Container */}
       <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block border-l border-black/10">
         <Image
-          src="/kelvronex_hero_premium_1777916516203.png"
-          alt="Kelvronex Architecture"
+          src="/hero_girl_laptop_1778072900971.png"
+          alt="Focused student working on laptop at Kelvronex"
           fill
           className="object-cover grayscale"
           priority
@@ -28,8 +28,8 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="flex items-center space-x-4 mb-8 lg:mb-12"
           >
-            <div className="w-12 h-[1px] bg-accent" />
-            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent">
+            <div className="w-12 h-[1px] bg-black" />
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-secondary">
               The Future of Technical Education
             </span>
           </motion.div>
@@ -58,8 +58,8 @@ export default function Hero() {
                   <span>Start Track</span>
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-2 transition-transform" />
                 </button>
-                <button className="px-8 py-5 bg-transparent text-black border border-black sm:border-l-0 font-black uppercase tracking-[0.3em] text-[10px] lg:text-xs hover:bg-black hover:text-white transition-all flex items-center justify-center whitespace-nowrap group">
-                  <Play className="w-3 h-3 mr-3 fill-current text-accent group-hover:text-white transition-colors" />
+                <button className="px-8 py-5 bg-transparent text-black border border-black sm:border-l-0 font-black uppercase tracking-[0.3em] text-[10px] lg:text-xs hover:bg-black hover:text-white transition-all flex items-center justify-center whitespace-nowrap">
+                  <Play className="w-3 h-3 mr-3 fill-current" />
                   <span>Showcase</span>
                 </button>
               </div>
@@ -78,9 +78,9 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      
+
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-12 left-8 hidden lg:flex flex-col items-center"

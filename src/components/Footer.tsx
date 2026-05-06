@@ -58,13 +58,13 @@ export default function Footer() {
           <div className="md:col-span-4">
             <h4 className="text-[10px] font-black uppercase tracking-[0.5em] text-black mb-8">Newsletter</h4>
             <p className="text-secondary text-sm mb-8">Professional updates on technical architectural trends.</p>
-            <div className="flex border-b border-black/20 pb-2 focus-within:border-accent transition-colors group">
-              <input 
-                type="email" 
-                placeholder="office@company.com" 
-                className="bg-transparent w-full outline-none text-sm font-medium focus:text-accent transition-colors"
+            <div className="flex border-b border-black/20 pb-2 focus-within:border-black transition-colors">
+              <input
+                type="email"
+                placeholder="office@company.com"
+                className="bg-transparent w-full outline-none text-sm font-medium"
               />
-              <button className="text-black group-focus-within:text-accent hover:translate-x-1 hover:-translate-y-1 transition-all">
+              <button className="text-black hover:translate-x-1 transition-transform">
                 <ArrowUpRight className="w-5 h-5" />
               </button>
             </div>

@@ -57,12 +57,12 @@ export default function CourseHighlights() {
                 </motion.div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 pointer-events-none" />
                 <div className="absolute top-8 right-8 w-12 h-12 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0 duration-500 shadow-xl">
-                  <ArrowUpRight className="w-6 h-6 text-black group-hover:scale-110 group-hover:text-accent transition-all duration-300" />
+                  <ArrowUpRight className="w-6 h-6 text-black group-hover:scale-110 transition-transform duration-300" />
                 </div>
               </Link>
               <div className="flex justify-between items-start">
                 <div className="overflow-hidden">
-                  <motion.span 
+                  <motion.span
                     initial={{ y: 20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2 + (i * 0.2) }}
@@ -70,7 +70,7 @@ export default function CourseHighlights() {
                   >
                     {course.category}
                   </motion.span>
-                  <motion.h3 
+                  <motion.h3
                     initial={{ y: 20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.3 + (i * 0.2) }}
@@ -79,11 +79,11 @@ export default function CourseHighlights() {
                     {course.title}
                   </motion.h3>
                 </div>
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.5 + (i * 0.2) }}
-                  className="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 border border-black/10 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300"
+                  className="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 border border-black/10 group-hover:bg-black group-hover:text-white transition-all duration-300"
                 >
                   Enrolling Now
                 </motion.div>
