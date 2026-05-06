@@ -40,8 +40,8 @@ export default function Navbar() {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b",
-          isScrolled || isMobileMenuOpen ? "bg-white border-black/10 py-4" : "bg-transparent border-transparent py-6"
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b bg-white border-black/10",
+          isScrolled || isMobileMenuOpen ? "py-4" : "py-6"
         )}
       >
         <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
