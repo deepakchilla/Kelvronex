@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background Image Container */}
       <div 
         className="absolute right-0 top-0 w-1/2 h-full hidden lg:block"
-        style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%)', maskImage: 'linear-gradient(to right, transparent, black 20%)' }}
+        style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 30%)', maskImage: 'linear-gradient(to right, transparent, black 30%)' }}
       >
         <Image
           src="/hero_girl_laptop_1778072900971.png"
@@ -30,8 +30,8 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="flex items-center space-x-4 mb-8 lg:mb-12"
           >
-            <div className="w-12 h-[1px] bg-black" />
-            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-secondary">
+            <div className="w-12 h-[1px] bg-accent" />
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent">
               The Future of Technical Education
             </span>
           </motion.div>
@@ -46,7 +46,7 @@ export default function Hero() {
             <span className="text-outline">Academy</span>
           </motion.h1>
 
-          <div className="grid sm:grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-end">
+          <div className="flex flex-col gap-8 md:gap-12 items-start max-w-lg">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -60,36 +60,16 @@ export default function Hero() {
                   <span>Start Track</span>
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-2 transition-transform" />
                 </button>
-                <button className="px-8 py-5 bg-transparent text-black border border-black sm:border-l-0 font-black uppercase tracking-[0.3em] text-[10px] lg:text-xs hover:bg-black hover:text-white transition-all flex items-center justify-center whitespace-nowrap">
-                  <Play className="w-3 h-3 mr-3 fill-current" />
+                <button className="px-8 py-5 bg-transparent text-black border border-black sm:border-l-0 font-black uppercase tracking-[0.3em] text-[10px] lg:text-xs hover:bg-black hover:text-white transition-all flex items-center justify-center whitespace-nowrap group">
+                  <Play className="w-3 h-3 mr-3 fill-current text-accent group-hover:text-white transition-colors" />
                   <span>Showcase</span>
                 </button>
               </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="hidden md:flex flex-col space-y-6 text-[10px] font-black uppercase tracking-[0.3em] text-muted border-l border-black/5 pl-6"
-            >
-              <div>/ 01 Precision</div>
-              <div>/ 02 Integrity</div>
-              <div>/ 03 Mastery</div>
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-8 hidden 2xl:flex flex-col items-center"
-      >
-        <span className="text-[8px] font-black uppercase tracking-[0.5em] rotate-90 mb-8 origin-left">Scroll</span>
-        <div className="w-[1px] h-12 bg-black/20" />
-      </motion.div>
     </section>
   );
 }
