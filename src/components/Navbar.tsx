@@ -63,13 +63,13 @@ export default function Navbar() {
                 className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary hover:text-black transition-colors relative group py-2 px-1 overflow-hidden"
               >
                 <span className="relative z-10">{link.name}</span>
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
-                <span className="absolute inset-0 bg-black/[0.03] origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300 ease-out -z-10" />
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
+                <span className="absolute inset-0 bg-accent/5 origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300 ease-out -z-10" />
               </Link>
             ))}
             <Link href="/login" className="px-8 py-3 bg-black text-white text-[10px] font-black uppercase tracking-[0.3em] transition-all flex items-center group relative overflow-hidden ml-4">
               <span className="relative z-10 group-hover:text-black transition-colors duration-300">Login</span>
-              <ArrowRight className="w-3 h-3 ml-2 relative z-10 group-hover:translate-x-1 group-hover:text-black transition-all duration-300" />
+              <ArrowRight className="w-3 h-3 ml-2 relative z-10 group-hover:translate-x-1 group-hover:text-accent transition-all duration-300" />
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0 border border-black" />
             </Link>
           </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
                     className="group flex items-center border-b border-black/10 pb-4"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <span className="text-sm font-black text-secondary/50 mr-8">{link.number}</span>
+                    <span className="text-sm font-black text-accent/50 mr-8 group-hover:text-accent transition-colors duration-500">{link.number}</span>
                     <span className="text-4xl font-black uppercase tracking-tighter text-black group-hover:translate-x-4 transition-transform duration-500">
                       {link.name}
                     </span>
@@ -126,7 +126,7 @@ export default function Navbar() {
               >
                 <Link href="/login" className="w-full py-6 bg-black text-white font-black uppercase tracking-[0.3em] text-xs flex justify-center items-center group relative overflow-hidden">
                   <span className="relative z-10 group-hover:text-black transition-colors duration-300">Login</span>
-                  <ArrowRight className="w-4 h-4 ml-3 relative z-10 group-hover:translate-x-2 group-hover:text-black transition-all duration-300" />
+                  <ArrowRight className="w-4 h-4 ml-3 relative z-10 group-hover:translate-x-2 group-hover:text-accent transition-all duration-300" />
                   <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0 border border-black" />
                 </Link>
               </motion.div>

@@ -102,22 +102,22 @@ export default function ContactPage() {
 
                 <form className="space-y-12">
                   <div className="relative group">
-                    <input type="text" id="name" className="w-full bg-transparent border-b border-black/20 py-4 focus:border-black outline-none transition-all font-medium text-lg peer" placeholder=" " required />
-                    <label htmlFor="name" className="absolute left-0 top-4 text-[10px] font-black uppercase tracking-[0.5em] text-muted transition-all peer-focus:-top-4 peer-focus:text-[8px] peer-focus:text-black peer-valid:-top-4 peer-valid:text-[8px]">
+                    <input type="text" id="name" className="w-full bg-transparent border-b border-black/20 py-4 focus:border-accent outline-none transition-all font-medium text-lg peer" placeholder=" " required />
+                    <label htmlFor="name" className="absolute left-0 top-4 text-[10px] font-black uppercase tracking-[0.5em] text-muted transition-all peer-focus:-top-4 peer-focus:text-[8px] peer-focus:text-accent peer-valid:-top-4 peer-valid:text-[8px]">
                       Identification (Name)
                     </label>
                   </div>
                   
                   <div className="relative group">
-                    <input type="email" id="email" className="w-full bg-transparent border-b border-black/20 py-4 focus:border-black outline-none transition-all font-medium text-lg peer" placeholder=" " required />
-                    <label htmlFor="email" className="absolute left-0 top-4 text-[10px] font-black uppercase tracking-[0.5em] text-muted transition-all peer-focus:-top-4 peer-focus:text-[8px] peer-focus:text-black peer-valid:-top-4 peer-valid:text-[8px]">
+                    <input type="email" id="email" className="w-full bg-transparent border-b border-black/20 py-4 focus:border-accent outline-none transition-all font-medium text-lg peer" placeholder=" " required />
+                    <label htmlFor="email" className="absolute left-0 top-4 text-[10px] font-black uppercase tracking-[0.5em] text-muted transition-all peer-focus:-top-4 peer-focus:text-[8px] peer-focus:text-accent peer-valid:-top-4 peer-valid:text-[8px]">
                       Network Address (Email)
                     </label>
                   </div>
 
                   <div className="relative group">
-                    <textarea id="message" className="w-full bg-transparent border-b border-black/20 py-4 focus:border-black outline-none transition-all font-medium text-lg min-h-[150px] resize-none peer" placeholder=" " required />
-                    <label htmlFor="message" className="absolute left-0 top-4 text-[10px] font-black uppercase tracking-[0.5em] text-muted transition-all peer-focus:-top-4 peer-focus:text-[8px] peer-focus:text-black peer-valid:-top-4 peer-valid:text-[8px]">
+                    <textarea id="message" className="w-full bg-transparent border-b border-black/20 py-4 focus:border-accent outline-none transition-all font-medium text-lg min-h-[150px] resize-none peer" placeholder=" " required />
+                    <label htmlFor="message" className="absolute left-0 top-4 text-[10px] font-black uppercase tracking-[0.5em] text-muted transition-all peer-focus:-top-4 peer-focus:text-[8px] peer-focus:text-accent peer-valid:-top-4 peer-valid:text-[8px]">
                       Data Payload (Message)
                     </label>
                   </div>

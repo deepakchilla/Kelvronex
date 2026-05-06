@@ -28,8 +28,8 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="flex items-center space-x-4 mb-8 lg:mb-12"
           >
-            <div className="w-12 h-[1px] bg-black" />
-            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-secondary">
+            <div className="w-12 h-[1px] bg-accent" />
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent">
               The Future of Technical Education
             </span>
           </motion.div>
@@ -58,8 +58,8 @@ export default function Hero() {
                   <span>Start Track</span>
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-2 transition-transform" />
                 </button>
-                <button className="px-8 py-5 bg-transparent text-black border border-black sm:border-l-0 font-black uppercase tracking-[0.3em] text-[10px] lg:text-xs hover:bg-black hover:text-white transition-all flex items-center justify-center whitespace-nowrap">
-                  <Play className="w-3 h-3 mr-3 fill-current" />
+                <button className="px-8 py-5 bg-transparent text-black border border-black sm:border-l-0 font-black uppercase tracking-[0.3em] text-[10px] lg:text-xs hover:bg-black hover:text-white transition-all flex items-center justify-center whitespace-nowrap group">
+                  <Play className="w-3 h-3 mr-3 fill-current text-accent group-hover:text-white transition-colors" />
                   <span>Showcase</span>
                 </button>
               </div>
