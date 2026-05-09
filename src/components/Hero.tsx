@@ -1,78 +1,137 @@
-"use client";
+import { ArrowDownRight, Star } from "lucide-react";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
-import Image from "next/image";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-export default function Hero() {
-  return (
-    <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-white">
-      {/* Background Image Container */}
-      <div 
-        className="absolute right-0 top-0 w-1/2 h-full hidden lg:block"
-        style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 30%)', maskImage: 'linear-gradient(to right, transparent, black 30%)' }}
-      >
-        <Image
-          src="/hero_girl_laptop_1778072900971.png"
-          alt="Focused student working on laptop at Kelvronex"
-          fill
-          className="object-cover grayscale"
-          priority
-        />
-      </div>
-
-      <div className="container mx-auto px-8 relative z-10 w-full">
-        <div className="lg:w-1/2 pr-0 lg:pr-12 xl:pr-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex items-center space-x-4 mb-8 lg:mb-12"
-          >
-            <div className="w-12 h-[1px] bg-accent" />
-            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent">
-              The Future of Technical Education
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-8xl lg:text-[7rem] font-black uppercase tracking-tighter leading-[0.85] mb-10 text-black"
-          >
-            Kelvronex <br />
-            <span className="text-outline">Academy</span>
-          </motion.h1>
-
-          <div className="flex flex-col gap-8 md:gap-12 items-start max-w-lg">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <p className="text-base md:text-lg text-secondary font-medium mb-10 leading-relaxed border-l-2 border-black/10 pl-6 lg:pl-8">
-                Architecting the bridge between potential and performance through precision-crafted industrial pathways.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-0">
-                <button className="px-8 py-5 bg-black text-white font-black uppercase tracking-[0.3em] text-[10px] lg:text-xs hover:bg-transparent hover:text-black border border-black transition-all flex items-center justify-center group whitespace-nowrap">
-                  <span>Start Track</span>
-                  <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-2 transition-transform" />
-                </button>
-                <button className="px-8 py-5 bg-transparent text-black border border-black sm:border-l-0 font-black uppercase tracking-[0.3em] text-[10px] lg:text-xs hover:bg-black hover:text-white transition-all flex items-center justify-center whitespace-nowrap group">
-                  <Play className="w-3 h-3 mr-3 fill-current text-accent group-hover:text-white transition-colors" />
-                  <span>Showcase</span>
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-  );
+interface Hero3Props {
+  heading?: string;
+  description?: string;
+  buttons?: {
+    primary?: {
+      text: string;
+      url: string;
+      className?: string;
+    };
+    secondary?: {
+      text: string;
+      url: string;
+    };
+  };
+  reviews?: {
+    count: string | number;
+    avatars: {
+      src: string;
+      alt: string;
+    }[];
+    rating?: number;
+  };
+  className?: string;
 }
 
+const Hero3 = ({
+  heading = "Kelvronex Academy",
+  description = "Architecting the bridge between potential and performance through precision-crafted industrial pathways. Empowering the next generation of tech leaders.",
+  buttons = {
+    primary: {
+      text: "Start Track",
+      url: "/tracks",
+    },
+    secondary: {
+      text: "Showcase",
+      url: "/about",
+    },
+  },
+  reviews = {
+    count: "50K",
+    rating: 4.8,
+    avatars: [
+      {
+        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp",
+        alt: "Avatar 1",
+      },
+      {
+        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp",
+        alt: "Avatar 2",
+      },
+      {
+        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp",
+        alt: "Avatar 3",
+      },
+      {
+        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp",
+        alt: "Avatar 4",
+      },
+      {
+        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-5.webp",
+        alt: "Avatar 5",
+      },
+    ],
+  },
+  className,
+}: Hero3Props) => {
+  return (
+    <section className={cn("py-32", className)}>
+      <div className="max-w-7xl mx-auto px-8 grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left w-full lg:max-w-3xl">
+          <h1 className="my-6 text-4xl font-bold text-pretty lg:text-6xl xl:text-7xl">
+            {heading}
+          </h1>
+          <p className="mb-8 max-w-xl text-muted-foreground lg:text-xl">
+            {description}
+          </p>
+          <div className="mb-12 flex w-fit flex-col items-center gap-4 sm:flex-row">
+            <span className="inline-flex items-center -space-x-4">
+              {reviews.avatars.map((avatar, index) => (
+                <Avatar key={index} className="size-12 border">
+                  <AvatarImage src={avatar.src} alt={avatar.alt} />
+                </Avatar>
+              ))}
+            </span>
+            <div>
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, index) => (
+                  <Star
+                    key={index}
+                    className="size-5 fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+                <span className="mr-1 font-semibold">
+                  {reviews.rating?.toFixed(1)}
+                </span>
+              </div>
+              <p className="text-left font-medium text-muted-foreground">
+                from {reviews.count}+ successful mentees
+              </p>
+            </div>
+          </div>
+          <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
+            {buttons.primary && (
+              <Button asChild className="w-full sm:w-auto">
+                <a href={buttons.primary.url}>{buttons.primary.text}</a>
+              </Button>
+            )}
+            {buttons.secondary && (
+              <Button asChild variant="outline">
+                <a href={buttons.secondary.url}>
+                  {buttons.secondary.text}
+                  <ArrowDownRight className="size-4" />
+                </a>
+              </Button>
+            )}
+          </div>
+        </div>
+        <div className="flex">
+          <img
+            src="/hero_girl_laptop_1778072900971.png"
+            alt="Focused student working on laptop at Kelvronex"
+            className="max-h-[600px] w-full rounded-md object-cover lg:max-h-[800px]"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
 
-
+export { Hero3 };
+export default Hero3;

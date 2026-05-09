@@ -83,12 +83,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Massive Watermark */}
-        <div className="mt-20 overflow-hidden select-none pointer-events-none relative z-0">
-          <h1 className="text-[15vw] leading-none font-black text-black/[0.03] text-center tracking-tighter">
-            KELVRONEX
-          </h1>
-        </div>
       </div>
     </footer>
   );
