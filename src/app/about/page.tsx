@@ -1,10 +1,20 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Code, Cpu, Globe, Layers, Shield, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "About Us & Engineering Vision | Kelvronex Academy",
+  description: "Learn about the mission, engineering integrity, high-performance metrics, and leadership team of Kelvronex Academy.",
+  openGraph: {
+    title: "About Us & Engineering Vision | Kelvronex Academy",
+    description: "Learn about the mission, engineering integrity, high-performance metrics, and leadership team of Kelvronex Academy.",
+    type: "website",
+    url: "https://kelvronex.com/about",
+  }
+};
 
 export default function AboutPage() {
   return (

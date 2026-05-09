@@ -1,11 +1,20 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Courses from "@/components/Courses";
 import PageHero from "@/components/PageHero";
-import { motion } from "framer-motion";
+
+export const metadata: Metadata = {
+  title: "Professional Learning Tracks & Curriculum | Kelvronex Academy",
+  description: "Browse 50+ industry-aligned curriculum pathways at Kelvronex Academy, covering Software Architecture, Generative AI, IoT, Quantum Systems, and Corporate Governance.",
+  openGraph: {
+    title: "Professional Learning Tracks & Curriculum | Kelvronex Academy",
+    description: "Browse 50+ industry-aligned curriculum pathways at Kelvronex Academy, covering Software Architecture, Generative AI, IoT, Quantum Systems, and Corporate Governance.",
+    type: "website",
+    url: "https://kelvronex.com/tracks",
+  }
+};
 
 export default function TracksPage() {
   return (
